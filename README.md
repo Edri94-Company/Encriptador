@@ -6,4 +6,4 @@ Software para encriptacion
 *Archivos Txt
 *Archivos app.settings para configuracion de aplicaciones en C#
 
-![Encriptador Logo](\Encriptador\Encriptador\resources\encriptacion.png)
+![Encriptador Logo](\Encriptador\resources\encriptacion.png)
