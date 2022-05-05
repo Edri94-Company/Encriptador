@@ -1,0 +1,17 @@
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.exe
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.deps.json
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.runtimeconfig.json
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.runtimeconfig.dev.json
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.dll
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.pdb
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.csproj.AssemblyReference.cache
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.csproj.GenerateResource.cache
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.AssemblyInfoInputs.cache
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.AssemblyInfo.cs
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.csproj.CoreCompileInputs.cache
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.dll
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.pdb
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.genruntimeconfig.cache
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.Encriptador_Texto.resources
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.frmContenedor.resources
+C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.Properties.Resources.resources
