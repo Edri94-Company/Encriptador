@@ -31,10 +31,10 @@ namespace Encriptador
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEncriptadorArchivos = new System.Windows.Forms.Button();
             this.btnEncriptadorTxt = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnEncriptadorArchivos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,18 @@ namespace Encriptador
             this.groupBox1.Size = new System.Drawing.Size(409, 657);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnEncriptadorArchivos
+            // 
+            this.btnEncriptadorArchivos.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnEncriptadorArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEncriptadorArchivos.Location = new System.Drawing.Point(29, 403);
+            this.btnEncriptadorArchivos.Name = "btnEncriptadorArchivos";
+            this.btnEncriptadorArchivos.Size = new System.Drawing.Size(355, 50);
+            this.btnEncriptadorArchivos.TabIndex = 2;
+            this.btnEncriptadorArchivos.Text = "Encriptador Archivos";
+            this.btnEncriptadorArchivos.UseVisualStyleBackColor = false;
+            this.btnEncriptadorArchivos.Click += new System.EventHandler(this.btnEncriptadorArchivos_Click);
             // 
             // btnEncriptadorTxt
             // 
@@ -91,18 +103,6 @@ namespace Encriptador
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(770, 654);
             this.panelContenedor.TabIndex = 2;
-            // 
-            // btnEncriptadorArchivos
-            // 
-            this.btnEncriptadorArchivos.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEncriptadorArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncriptadorArchivos.Location = new System.Drawing.Point(29, 403);
-            this.btnEncriptadorArchivos.Name = "btnEncriptadorArchivos";
-            this.btnEncriptadorArchivos.Size = new System.Drawing.Size(355, 50);
-            this.btnEncriptadorArchivos.TabIndex = 2;
-            this.btnEncriptadorArchivos.Text = "Encriptador Archivos";
-            this.btnEncriptadorArchivos.UseVisualStyleBackColor = false;
-            this.btnEncriptadorArchivos.Click += new System.EventHandler(this.btnEncriptadorTxt_Click);
             // 
             // frmContenedor
             // 
