@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Encriptador
 {
@@ -56,6 +57,11 @@ namespace Encriptador
         private void btnEncriptadorArchivos_Click(object sender, EventArgs e)
         {
             AbrirFormEncriptadorTxt(new Encriptador_Archivos());
+        }
+
+        private void frmContenedor_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -115,6 +115,7 @@ namespace Encriptador
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmContenedor";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmContenedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

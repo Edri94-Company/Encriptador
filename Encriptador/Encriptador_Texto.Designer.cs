@@ -41,6 +41,8 @@ namespace Encriptador
             this.btnReset = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtCadena = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@ namespace Encriptador
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(702, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(656, 27);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(44, 39);
             this.btnCerrar.TabIndex = 0;
@@ -62,7 +64,7 @@ namespace Encriptador
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(188, 41);
+            this.label1.Location = new System.Drawing.Point(186, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(324, 43);
             this.label1.TabIndex = 1;
@@ -71,7 +73,10 @@ namespace Encriptador
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lstvwResultados);
+            this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnCopiar);
             this.groupBox1.Controls.Add(this.rbDesencriptar);
@@ -80,9 +85,9 @@ namespace Encriptador
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Controls.Add(this.btnEnviar);
             this.groupBox1.Controls.Add(this.txtCadena);
-            this.groupBox1.Location = new System.Drawing.Point(31, 53);
+            this.groupBox1.Location = new System.Drawing.Point(27, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(715, 589);
+            this.groupBox1.Size = new System.Drawing.Size(717, 630);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -90,7 +95,7 @@ namespace Encriptador
             // 
             this.lstvwResultados.FormattingEnabled = true;
             this.lstvwResultados.ItemHeight = 25;
-            this.lstvwResultados.Location = new System.Drawing.Point(42, 304);
+            this.lstvwResultados.Location = new System.Drawing.Point(40, 347);
             this.lstvwResultados.Name = "lstvwResultados";
             this.lstvwResultados.Size = new System.Drawing.Size(651, 254);
             this.lstvwResultados.TabIndex = 6;
@@ -98,7 +103,7 @@ namespace Encriptador
             // 
             // btnCopiar
             // 
-            this.btnCopiar.Location = new System.Drawing.Point(572, 220);
+            this.btnCopiar.Location = new System.Drawing.Point(570, 263);
             this.btnCopiar.Name = "btnCopiar";
             this.btnCopiar.Size = new System.Drawing.Size(112, 34);
             this.btnCopiar.TabIndex = 5;
@@ -109,7 +114,7 @@ namespace Encriptador
             // rbDesencriptar
             // 
             this.rbDesencriptar.AutoSize = true;
-            this.rbDesencriptar.Location = new System.Drawing.Point(33, 269);
+            this.rbDesencriptar.Location = new System.Drawing.Point(31, 312);
             this.rbDesencriptar.Name = "rbDesencriptar";
             this.rbDesencriptar.Size = new System.Drawing.Size(136, 29);
             this.rbDesencriptar.TabIndex = 4;
@@ -120,7 +125,7 @@ namespace Encriptador
             // rbEncriptar
             // 
             this.rbEncriptar.AutoSize = true;
-            this.rbEncriptar.Location = new System.Drawing.Point(33, 234);
+            this.rbEncriptar.Location = new System.Drawing.Point(31, 277);
             this.rbEncriptar.Name = "rbEncriptar";
             this.rbEncriptar.Size = new System.Drawing.Size(106, 29);
             this.rbEncriptar.TabIndex = 4;
@@ -131,14 +136,15 @@ namespace Encriptador
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(33, 183);
+            this.txtResultado.Location = new System.Drawing.Point(120, 226);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(651, 31);
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.Size = new System.Drawing.Size(562, 31);
             this.txtResultado.TabIndex = 3;
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(572, 143);
+            this.btnReset.Location = new System.Drawing.Point(570, 186);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(112, 34);
             this.btnReset.TabIndex = 2;
@@ -148,7 +154,7 @@ namespace Encriptador
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(454, 143);
+            this.btnEnviar.Location = new System.Drawing.Point(452, 186);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(112, 34);
             this.btnEnviar.TabIndex = 1;
@@ -158,10 +164,29 @@ namespace Encriptador
             // 
             // txtCadena
             // 
-            this.txtCadena.Location = new System.Drawing.Point(33, 106);
+            this.txtCadena.Location = new System.Drawing.Point(83, 149);
             this.txtCadena.Name = "txtCadena";
-            this.txtCadena.Size = new System.Drawing.Size(651, 31);
+            this.txtCadena.Size = new System.Drawing.Size(599, 31);
             this.txtCadena.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Texto:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Resultado:";
             // 
             // Encriptador_Texto
             // 
@@ -170,7 +195,6 @@ namespace Encriptador
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(770, 654);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Encriptador_Texto";
             this.Text = "Encriptador_Texto";
@@ -193,5 +217,7 @@ namespace Encriptador
         private System.Windows.Forms.TextBox txtCadena;
         private System.Windows.Forms.Button btnCopiar;
         private System.Windows.Forms.ListBox lstvwResultados;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
