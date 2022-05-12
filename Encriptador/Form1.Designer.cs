@@ -99,9 +99,9 @@ namespace Encriptador
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Location = new System.Drawing.Point(453, 15);
+            this.panelContenedor.Location = new System.Drawing.Point(453, 12);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(770, 654);
+            this.panelContenedor.Size = new System.Drawing.Size(770, 657);
             this.panelContenedor.TabIndex = 2;
             // 
             // frmContenedor
