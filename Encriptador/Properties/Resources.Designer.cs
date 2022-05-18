@@ -73,6 +73,16 @@ namespace Encriptador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap conf_button {
+            get {
+                object obj = ResourceManager.GetObject("conf_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap encriptacion {
             get {
                 object obj = ResourceManager.GetObject("encriptacion", resourceCulture);

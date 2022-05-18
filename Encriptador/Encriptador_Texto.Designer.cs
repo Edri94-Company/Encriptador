@@ -36,13 +36,13 @@ namespace Encriptador
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lstvwResultados = new System.Windows.Forms.ListBox();
-            this.btnCopiar = new System.Windows.Forms.Button();
             this.rbDesencriptar = new System.Windows.Forms.RadioButton();
             this.rbEncriptar = new System.Windows.Forms.RadioButton();
             this.txtResultado = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
             this.txtCadena = new System.Windows.Forms.TextBox();
+            this.buttonPers11 = new Encriptador.Botones.ButtonPers1();
+            this.buttonPers12 = new Encriptador.Botones.ButtonPers1();
+            this.buttonPers13 = new Encriptador.Botones.ButtonPers1();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,17 +73,17 @@ namespace Encriptador
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonPers13);
+            this.groupBox1.Controls.Add(this.buttonPers12);
+            this.groupBox1.Controls.Add(this.buttonPers11);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lstvwResultados);
             this.groupBox1.Controls.Add(this.btnCerrar);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnCopiar);
             this.groupBox1.Controls.Add(this.rbDesencriptar);
             this.groupBox1.Controls.Add(this.rbEncriptar);
             this.groupBox1.Controls.Add(this.txtResultado);
-            this.groupBox1.Controls.Add(this.btnReset);
-            this.groupBox1.Controls.Add(this.btnEnviar);
             this.groupBox1.Controls.Add(this.txtCadena);
             this.groupBox1.Location = new System.Drawing.Point(27, 12);
             this.groupBox1.Name = "groupBox1";
@@ -114,21 +114,11 @@ namespace Encriptador
             // 
             this.lstvwResultados.FormattingEnabled = true;
             this.lstvwResultados.ItemHeight = 25;
-            this.lstvwResultados.Location = new System.Drawing.Point(40, 297);
+            this.lstvwResultados.Location = new System.Drawing.Point(40, 322);
             this.lstvwResultados.Name = "lstvwResultados";
-            this.lstvwResultados.Size = new System.Drawing.Size(651, 304);
+            this.lstvwResultados.Size = new System.Drawing.Size(651, 279);
             this.lstvwResultados.TabIndex = 6;
             this.lstvwResultados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstvwResultados_KeyDown);
-            // 
-            // btnCopiar
-            // 
-            this.btnCopiar.Location = new System.Drawing.Point(570, 262);
-            this.btnCopiar.Name = "btnCopiar";
-            this.btnCopiar.Size = new System.Drawing.Size(112, 34);
-            this.btnCopiar.TabIndex = 5;
-            this.btnCopiar.Text = "Copiar";
-            this.btnCopiar.UseVisualStyleBackColor = true;
-            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
             // rbDesencriptar
             // 
@@ -161,32 +151,69 @@ namespace Encriptador
             this.txtResultado.Size = new System.Drawing.Size(562, 31);
             this.txtResultado.TabIndex = 3;
             // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(570, 184);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(112, 34);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "Borrar";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Location = new System.Drawing.Point(452, 184);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(112, 34);
-            this.btnEnviar.TabIndex = 1;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
             // txtCadena
             // 
             this.txtCadena.Location = new System.Drawing.Point(83, 149);
             this.txtCadena.Name = "txtCadena";
             this.txtCadena.Size = new System.Drawing.Size(599, 31);
             this.txtCadena.TabIndex = 0;
+            // 
+            // buttonPers11
+            // 
+            this.buttonPers11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers11.BackGroundColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers11.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPers11.BorderRadius = 40;
+            this.buttonPers11.BorderSize = 0;
+            this.buttonPers11.FlatAppearance.BorderSize = 0;
+            this.buttonPers11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPers11.ForeColor = System.Drawing.Color.White;
+            this.buttonPers11.Location = new System.Drawing.Point(459, 184);
+            this.buttonPers11.Name = "buttonPers11";
+            this.buttonPers11.Size = new System.Drawing.Size(105, 36);
+            this.buttonPers11.TabIndex = 8;
+            this.buttonPers11.Text = "Enviar";
+            this.buttonPers11.TextColor = System.Drawing.Color.White;
+            this.buttonPers11.UseVisualStyleBackColor = false;
+            this.buttonPers11.Click += new System.EventHandler(this.buttonPers11_Click);
+            // 
+            // buttonPers12
+            // 
+            this.buttonPers12.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers12.BackGroundColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers12.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPers12.BorderRadius = 40;
+            this.buttonPers12.BorderSize = 0;
+            this.buttonPers12.FlatAppearance.BorderSize = 0;
+            this.buttonPers12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPers12.ForeColor = System.Drawing.Color.White;
+            this.buttonPers12.Location = new System.Drawing.Point(570, 186);
+            this.buttonPers12.Name = "buttonPers12";
+            this.buttonPers12.Size = new System.Drawing.Size(112, 34);
+            this.buttonPers12.TabIndex = 9;
+            this.buttonPers12.Text = "Borrar";
+            this.buttonPers12.TextColor = System.Drawing.Color.White;
+            this.buttonPers12.UseVisualStyleBackColor = false;
+            this.buttonPers12.Click += new System.EventHandler(this.buttonPers12_Click);
+            // 
+            // buttonPers13
+            // 
+            this.buttonPers13.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers13.BackGroundColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers13.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPers13.BorderRadius = 40;
+            this.buttonPers13.BorderSize = 0;
+            this.buttonPers13.FlatAppearance.BorderSize = 0;
+            this.buttonPers13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPers13.ForeColor = System.Drawing.Color.White;
+            this.buttonPers13.Location = new System.Drawing.Point(521, 263);
+            this.buttonPers13.Name = "buttonPers13";
+            this.buttonPers13.Size = new System.Drawing.Size(161, 37);
+            this.buttonPers13.TabIndex = 10;
+            this.buttonPers13.Text = "Copiar";
+            this.buttonPers13.TextColor = System.Drawing.Color.White;
+            this.buttonPers13.UseVisualStyleBackColor = false;
+            this.buttonPers13.Click += new System.EventHandler(this.buttonPers13_Click);
             // 
             // Encriptador_Texto
             // 
@@ -212,12 +239,12 @@ namespace Encriptador
         private System.Windows.Forms.RadioButton rbDesencriptar;
         private System.Windows.Forms.RadioButton rbEncriptar;
         private System.Windows.Forms.TextBox txtResultado;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtCadena;
-        private System.Windows.Forms.Button btnCopiar;
         private System.Windows.Forms.ListBox lstvwResultados;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private Botones.ButtonPers1 buttonPers11;
+        private Botones.ButtonPers1 buttonPers12;
+        private Botones.ButtonPers1 buttonPers13;
     }
 }
