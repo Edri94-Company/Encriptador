@@ -18,4 +18,3 @@ C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\En
 C:\Users\MI05332\source\repos\Encriptador\Encriptador\bin\Debug\netcoreapp3.1\Encriptador.dll.config
 C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.Frm_EdicionNodo.resources
 C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.Frm_Configuraciones.resources
-C:\Users\MI05332\source\repos\Encriptador\Encriptador\obj\Debug\netcoreapp3.1\Encriptador.csproj.AssemblyReference.cache
