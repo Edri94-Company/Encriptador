@@ -83,9 +83,9 @@ namespace Encriptador
                     }
                 }
 
+                string accion = (rbEncriptar.Checked) ? "Encriptado" : "Desencriptado";
 
-
-                lstvwResultados.Items.Add(txtCadena.Text + " => " + txtResultado.Text);
+                lstvwResultados.Items.Add($"[Original: {txtCadena.Text}] [{accion}: {txtResultado.Text}]");
 
 
                 //Add items in the listview

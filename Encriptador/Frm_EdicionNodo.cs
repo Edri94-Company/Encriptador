@@ -94,5 +94,14 @@ namespace Encriptador
                 MessageBox.Show("No puede ir vacio el campo VALUE");
             }
         }
+
+        private void Frm_EdicionNodo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            txtValue.Text = nodo.Text.Split(':')[1];
+            rbEncrypt.Checked = false;
+            rbDecrypt.Checked = false;
+
+            btnEnviar.PerformClick();
+        }
     }
 }

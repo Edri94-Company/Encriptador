@@ -33,6 +33,9 @@ namespace Encriptador
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonPers13 = new Encriptador.Botones.ButtonPers1();
+            this.buttonPers12 = new Encriptador.Botones.ButtonPers1();
+            this.buttonPers11 = new Encriptador.Botones.ButtonPers1();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lstvwResultados = new System.Windows.Forms.ListBox();
@@ -40,9 +43,6 @@ namespace Encriptador
             this.rbEncriptar = new System.Windows.Forms.RadioButton();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.txtCadena = new System.Windows.Forms.TextBox();
-            this.buttonPers11 = new Encriptador.Botones.ButtonPers1();
-            this.buttonPers12 = new Encriptador.Botones.ButtonPers1();
-            this.buttonPers13 = new Encriptador.Botones.ButtonPers1();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +91,63 @@ namespace Encriptador
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // buttonPers13
+            // 
+            this.buttonPers13.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers13.BackGroundColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers13.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPers13.BorderRadius = 40;
+            this.buttonPers13.BorderSize = 0;
+            this.buttonPers13.FlatAppearance.BorderSize = 0;
+            this.buttonPers13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPers13.ForeColor = System.Drawing.Color.White;
+            this.buttonPers13.Location = new System.Drawing.Point(521, 263);
+            this.buttonPers13.Name = "buttonPers13";
+            this.buttonPers13.Size = new System.Drawing.Size(161, 37);
+            this.buttonPers13.TabIndex = 10;
+            this.buttonPers13.Text = "Copiar";
+            this.buttonPers13.TextColor = System.Drawing.Color.White;
+            this.buttonPers13.UseVisualStyleBackColor = false;
+            this.buttonPers13.Click += new System.EventHandler(this.buttonPers13_Click);
+            // 
+            // buttonPers12
+            // 
+            this.buttonPers12.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers12.BackGroundColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers12.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPers12.BorderRadius = 40;
+            this.buttonPers12.BorderSize = 0;
+            this.buttonPers12.FlatAppearance.BorderSize = 0;
+            this.buttonPers12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPers12.ForeColor = System.Drawing.Color.White;
+            this.buttonPers12.Location = new System.Drawing.Point(570, 186);
+            this.buttonPers12.Name = "buttonPers12";
+            this.buttonPers12.Size = new System.Drawing.Size(112, 34);
+            this.buttonPers12.TabIndex = 9;
+            this.buttonPers12.Text = "Borrar";
+            this.buttonPers12.TextColor = System.Drawing.Color.White;
+            this.buttonPers12.UseVisualStyleBackColor = false;
+            this.buttonPers12.Click += new System.EventHandler(this.buttonPers12_Click);
+            // 
+            // buttonPers11
+            // 
+            this.buttonPers11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers11.BackGroundColor = System.Drawing.Color.RoyalBlue;
+            this.buttonPers11.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPers11.BorderRadius = 40;
+            this.buttonPers11.BorderSize = 0;
+            this.buttonPers11.FlatAppearance.BorderSize = 0;
+            this.buttonPers11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPers11.ForeColor = System.Drawing.Color.White;
+            this.buttonPers11.Location = new System.Drawing.Point(459, 184);
+            this.buttonPers11.Name = "buttonPers11";
+            this.buttonPers11.Size = new System.Drawing.Size(105, 36);
+            this.buttonPers11.TabIndex = 8;
+            this.buttonPers11.Text = "Enviar";
+            this.buttonPers11.TextColor = System.Drawing.Color.White;
+            this.buttonPers11.UseVisualStyleBackColor = false;
+            this.buttonPers11.Click += new System.EventHandler(this.buttonPers11_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -113,9 +170,11 @@ namespace Encriptador
             // lstvwResultados
             // 
             this.lstvwResultados.FormattingEnabled = true;
+            this.lstvwResultados.HorizontalScrollbar = true;
             this.lstvwResultados.ItemHeight = 25;
             this.lstvwResultados.Location = new System.Drawing.Point(40, 322);
             this.lstvwResultados.Name = "lstvwResultados";
+            this.lstvwResultados.ScrollAlwaysVisible = true;
             this.lstvwResultados.Size = new System.Drawing.Size(651, 279);
             this.lstvwResultados.TabIndex = 6;
             this.lstvwResultados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstvwResultados_KeyDown);
@@ -157,63 +216,6 @@ namespace Encriptador
             this.txtCadena.Name = "txtCadena";
             this.txtCadena.Size = new System.Drawing.Size(599, 31);
             this.txtCadena.TabIndex = 0;
-            // 
-            // buttonPers11
-            // 
-            this.buttonPers11.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonPers11.BackGroundColor = System.Drawing.Color.RoyalBlue;
-            this.buttonPers11.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonPers11.BorderRadius = 40;
-            this.buttonPers11.BorderSize = 0;
-            this.buttonPers11.FlatAppearance.BorderSize = 0;
-            this.buttonPers11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPers11.ForeColor = System.Drawing.Color.White;
-            this.buttonPers11.Location = new System.Drawing.Point(459, 184);
-            this.buttonPers11.Name = "buttonPers11";
-            this.buttonPers11.Size = new System.Drawing.Size(105, 36);
-            this.buttonPers11.TabIndex = 8;
-            this.buttonPers11.Text = "Enviar";
-            this.buttonPers11.TextColor = System.Drawing.Color.White;
-            this.buttonPers11.UseVisualStyleBackColor = false;
-            this.buttonPers11.Click += new System.EventHandler(this.buttonPers11_Click);
-            // 
-            // buttonPers12
-            // 
-            this.buttonPers12.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonPers12.BackGroundColor = System.Drawing.Color.RoyalBlue;
-            this.buttonPers12.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonPers12.BorderRadius = 40;
-            this.buttonPers12.BorderSize = 0;
-            this.buttonPers12.FlatAppearance.BorderSize = 0;
-            this.buttonPers12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPers12.ForeColor = System.Drawing.Color.White;
-            this.buttonPers12.Location = new System.Drawing.Point(570, 186);
-            this.buttonPers12.Name = "buttonPers12";
-            this.buttonPers12.Size = new System.Drawing.Size(112, 34);
-            this.buttonPers12.TabIndex = 9;
-            this.buttonPers12.Text = "Borrar";
-            this.buttonPers12.TextColor = System.Drawing.Color.White;
-            this.buttonPers12.UseVisualStyleBackColor = false;
-            this.buttonPers12.Click += new System.EventHandler(this.buttonPers12_Click);
-            // 
-            // buttonPers13
-            // 
-            this.buttonPers13.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonPers13.BackGroundColor = System.Drawing.Color.RoyalBlue;
-            this.buttonPers13.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonPers13.BorderRadius = 40;
-            this.buttonPers13.BorderSize = 0;
-            this.buttonPers13.FlatAppearance.BorderSize = 0;
-            this.buttonPers13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPers13.ForeColor = System.Drawing.Color.White;
-            this.buttonPers13.Location = new System.Drawing.Point(521, 263);
-            this.buttonPers13.Name = "buttonPers13";
-            this.buttonPers13.Size = new System.Drawing.Size(161, 37);
-            this.buttonPers13.TabIndex = 10;
-            this.buttonPers13.Text = "Copiar";
-            this.buttonPers13.TextColor = System.Drawing.Color.White;
-            this.buttonPers13.UseVisualStyleBackColor = false;
-            this.buttonPers13.Click += new System.EventHandler(this.buttonPers13_Click);
             // 
             // Encriptador_Texto
             // 

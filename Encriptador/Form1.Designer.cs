@@ -31,11 +31,11 @@ namespace Encriptador
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.buttonPers13 = new Encriptador.Botones.ButtonPers1();
             this.buttonPers12 = new Encriptador.Botones.ButtonPers1();
             this.buttonPers11 = new Encriptador.Botones.ButtonPers1();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,20 @@ namespace Encriptador
             this.groupBox1.Size = new System.Drawing.Size(409, 657);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackgroundImage = global::Encriptador.Properties.Resources.conf_button;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(359, 30);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(44, 39);
+            this.btnCerrar.TabIndex = 7;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // buttonPers13
             // 
@@ -127,20 +141,6 @@ namespace Encriptador
             this.panelContenedor.Size = new System.Drawing.Size(770, 657);
             this.panelContenedor.TabIndex = 2;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackgroundImage = global::Encriptador.Properties.Resources.conf_button;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(359, 30);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(44, 39);
-            this.btnCerrar.TabIndex = 7;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // frmContenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -149,9 +149,9 @@ namespace Encriptador
             this.ClientSize = new System.Drawing.Size(1233, 677);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmContenedor";
-            this.Text = "Form1";
+            this.Text = "Encriptador - Edri Angulo";
             this.Load += new System.EventHandler(this.frmContenedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

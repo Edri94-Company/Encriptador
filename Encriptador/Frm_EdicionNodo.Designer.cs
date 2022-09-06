@@ -41,16 +41,16 @@ namespace Encriptador
             // 
             // txtValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(89, 89);
+            this.txtValue.Location = new System.Drawing.Point(89, 74);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(394, 31);
             this.txtValue.TabIndex = 0;
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(371, 251);
+            this.btnEnviar.Location = new System.Drawing.Point(377, 172);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(112, 34);
+            this.btnEnviar.Size = new System.Drawing.Size(112, 30);
             this.btnEnviar.TabIndex = 1;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@ namespace Encriptador
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 92);
+            this.label1.Location = new System.Drawing.Point(12, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 25);
             this.label1.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace Encriptador
             // rbEncrypt
             // 
             this.rbEncrypt.AutoSize = true;
-            this.rbEncrypt.Location = new System.Drawing.Point(209, 137);
+            this.rbEncrypt.Location = new System.Drawing.Point(205, 111);
             this.rbEncrypt.Name = "rbEncrypt";
             this.rbEncrypt.Size = new System.Drawing.Size(106, 29);
             this.rbEncrypt.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace Encriptador
             // rbDecrypt
             // 
             this.rbDecrypt.AutoSize = true;
-            this.rbDecrypt.Location = new System.Drawing.Point(347, 137);
+            this.rbDecrypt.Location = new System.Drawing.Point(343, 111);
             this.rbDecrypt.Name = "rbDecrypt";
             this.rbDecrypt.Size = new System.Drawing.Size(136, 29);
             this.rbDecrypt.TabIndex = 3;
@@ -109,9 +109,9 @@ namespace Encriptador
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(231, 251);
+            this.btnReset.Location = new System.Drawing.Point(259, 172);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(112, 34);
+            this.btnReset.Size = new System.Drawing.Size(112, 30);
             this.btnReset.TabIndex = 1;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@ namespace Encriptador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 310);
+            this.ClientSize = new System.Drawing.Size(497, 224);
             this.Controls.Add(this.rbDecrypt);
             this.Controls.Add(this.rbEncrypt);
             this.Controls.Add(this.lblNodo);
@@ -130,9 +130,11 @@ namespace Encriptador
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtValue);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Frm_EdicionNodo";
-            this.Text = "Frm_EdicionNodo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Edicion Nodo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_EdicionNodo_FormClosed);
             this.Load += new System.EventHandler(this.Frm_EdicionNodo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
