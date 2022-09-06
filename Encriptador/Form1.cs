@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using Encriptador.Helpers;
 
 namespace Encriptador
 {
@@ -61,7 +62,26 @@ namespace Encriptador
 
         private void frmContenedor_Load(object sender, EventArgs e)
         {
-            
+            string nombre_appconfig = "Encriptador.dll.config";
+            string appPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            string[] appPath_arr = appPath.Split('\\');
+            string configFile = System.IO.Path.Combine(appPath, nombre_appconfig);
+            ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
+            configFileMap.ExeConfigFilename = configFile;
+            System.Configuration.Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
+
+            foreach (KeyValueConfigurationElement configuracion in config.AppSettings.Settings)
+            {
+                switch (configuracion.Key)
+                {
+                    case "LOG.Escribe":
+                        Log.EscribeLog = (configuracion.Value == "1");
+                        break;
+                    case "LOG.Ruta":
+                        Log.RutaLog = configuracion.Value;
+                        break;
+                }
+            }
         }
 
         private void buttonPers11_Click(object sender, EventArgs e)

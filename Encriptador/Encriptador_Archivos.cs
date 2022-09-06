@@ -101,7 +101,7 @@ namespace Encriptador
 
             DialogResult respuesta;
 
-            if(config.AppSettings.Settings["campos_password"].Value == "True")
+            if (config.AppSettings.Settings["campos_password"].Value == "True")
             {
                 if (campos_contrasena.Count > 0)
                 {
@@ -115,7 +115,7 @@ namespace Encriptador
                         }
                     }
                 }
-            }         
+            }
         }
 
         private void ActualizarNodo(string campo_contrasena, TreeNodeCollection nodos, string grupo_param = "")
@@ -126,7 +126,7 @@ namespace Encriptador
             string clave = string.Empty;
 
             if (campo_compuesto)
-            { 
+            {
                 grupo = campo_contrasena.Split('.')[0];
                 clave = campo_contrasena.Split('.')[1];
             }
@@ -137,16 +137,16 @@ namespace Encriptador
 
             foreach (TreeNode node in nodos)
             {
-               if(grupo != string.Empty && clave != string.Empty && node.Nodes.Count > 0)
+                if (grupo != string.Empty && clave != string.Empty && node.Nodes.Count > 0)
                 {
-                    if(node.Text.Contains(grupo))
+                    if (node.Text.Contains(grupo))
                     {
                         ActualizarNodo(clave, node.Nodes, grupo);
                     }
                 }
-               else
+                else
                 {
-                    if(node.Text.Split(':')[0].Contains(clave))
+                    if (node.Text.Split(':')[0].Contains(clave))
                     {
                         //aqui abrir fprmulario de edicion de nodo...
                         string nombre_nodo = node.Text;
@@ -163,11 +163,11 @@ namespace Encriptador
         }
 
         private void BuscarCampoPassword(string clave)
-        {        
+        {
             if (clave.ToLower().Contains("password") || clave.ToLower().Contains("contrasena") || clave.ToLower().Contains("contraseña") || clave.ToLower().Contains("clave") || clave.ToLower().Contains("pass"))
             {
                 campos_contrasena.Add(clave);
-            }            
+            }
         }
 
         private int BuscarNodo(string grupo, TreeNodeCollection nodes)
@@ -207,30 +207,65 @@ namespace Encriptador
 
         private void ConstruirArchivoConfig(TreeNodeCollection nodes, Configuration config, string clave = "")
         {
-            foreach(TreeNode node in nodes)
+            foreach (TreeNode node in nodes)
             {
                 string key;
                 string value;
-                if(node.Nodes.Count > 0)
+
+                if(node.Text.Contains("C:"))
+                {
+                    bool bandera_ruta = true;
+                }
+                if (node.Nodes.Count > 0)
                 {
                     key = node.Text;
                     ConstruirArchivoConfig(node.Nodes, config, key);
                 }
                 else
                 {
-                    if(clave == "")
+                    if (clave == "")
                     {
                         key = node.Text.Split(':')[0].TrimStart().TrimEnd();
                     }
                     else
                     {
                         key = clave + "." + node.Text.Split(':')[0].TrimStart().TrimEnd();
-                    }                  
+                    }
                     value = node.Text.Split(':')[1].TrimStart().TrimEnd();
+                    value = GetValueNode(node.Text);
 
                     config.AppSettings.Settings[key].Value = value;
 
                 }
+            }
+        }
+
+
+        /// <summary>
+        /// Obtiene el valor del nodo sin el key
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        private string GetValueNode(string text_node)
+        {
+            try
+            {
+                int i = 0;
+                string cadena = string.Empty;
+                foreach (string texto in text_node.Split(':'))
+                {
+                    if (i > 0)
+                    {
+                        cadena += ":" + texto;
+                    }
+                    i++;
+                }
+                return cadena.Remove(0, 1);
+            }
+            catch (Exception ex)
+            {
+                Log.Escribe(ex);
+                return null;
             }
         }
 
@@ -253,13 +288,23 @@ namespace Encriptador
             {
                 if (nombre_configuracion == "tipos")
                 {
-                    string tipos  = ConfigurationManager.AppSettings[nombre_configuracion];
+                    string tipos = ConfigurationManager.AppSettings[nombre_configuracion];
 
-                    foreach (string tipo  in tipos.Split(','))
+                    foreach (string tipo in tipos.Split(','))
                     {
                         cboTipos.Items.Add(tipo);
                     }
 
+                }
+                else if(nombre_configuracion == "etiquetas")
+                {
+                    string etiquetas = ConfigurationManager.AppSettings[nombre_configuracion];
+
+                    foreach (string etiqueta in etiquetas.Split(','))
+                    {
+                        cmbEtiquetas.Items.Add(etiqueta);
+                    }
+                    cmbEtiquetas.SelectedIndex = 0;
                 }
             }
         }
@@ -273,11 +318,11 @@ namespace Encriptador
                 case "config":
                     openFileDialog1.Filter = "config files (*.config)|*.config";
                     saveFileDialog1.Filter = "config files (*.config)|*.config";
-                break;
+                    break;
                 case "txt":
                     openFileDialog1.Filter = "txt files (*.txt)|*.txt";
                     saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
-                break;
+                    break;
             }
         }
 
@@ -299,7 +344,7 @@ namespace Encriptador
         {
             foreach (TreeNode node in nodes)
             {
-                if(node.Nodes.Count > 0)
+                if (node.Nodes.Count > 0)
                 {
                     RecorrerTreeView(node.Nodes, nodo_checked);
                 }
@@ -311,12 +356,12 @@ namespace Encriptador
                     {
                         node.Text = key + ":" + encriptacion.Encrypt(value);
                     }
-                    else if(node.Text == nodo_checked.Text && nodo_checked.Checked == false)
+                    else if (node.Text == nodo_checked.Text && nodo_checked.Checked == false)
                     {
                         node.Text = key + ":" + encriptacion.Decrypt(value);
                     }
                 }
-                
+
             }
         }
 
@@ -324,8 +369,9 @@ namespace Encriptador
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                //aqui va el codigo para abrir y leer el archivo
+                //aqui va el codigo para abrir y leer el archivo              
                 lblArchivo.Text = openFileDialog1.FileName;
+                Log.Escribe("Analizando archivo " + lblArchivo.Text);
                 string extension = GetExtension(openFileDialog1.FileName);
 
                 if (seleccionado == "config" && extension == "config")
@@ -365,11 +411,15 @@ namespace Encriptador
         {
             try
             {
+                MessageBox.Show("Guarda el archivo con diferente nombre al original, despues puedes reemplazarlo por el original. Al archivo ya se le agrego la etequita que elegiste anteriormente.", "Instrucciones", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 switch (seleccionado)
                 {
                     case "config":
+                        saveFileDialog1.FileName = lblArchivo.Text.Replace(".exe.config", "_" + cmbEtiquetas.Text + ".exe.config");
                         if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                         {
+                          
                             lblGuardar.Text = saveFileDialog1.FileName;
 
                             if (lblArchivo.Text == lblGuardar.Text)
@@ -425,6 +475,11 @@ namespace Encriptador
             {
                 MessageBox.Show(ex.Message, "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

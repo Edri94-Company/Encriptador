@@ -48,9 +48,9 @@ namespace Encriptador
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(377, 172);
+            this.btnEnviar.Location = new System.Drawing.Point(371, 172);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(112, 30);
+            this.btnEnviar.Size = new System.Drawing.Size(112, 40);
             this.btnEnviar.TabIndex = 1;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
@@ -70,20 +70,22 @@ namespace Encriptador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(46, 28);
+            this.label2.Location = new System.Drawing.Point(37, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "Edicion Nodo";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNodo
             // 
             this.lblNodo.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNodo.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblNodo.Location = new System.Drawing.Point(231, 28);
+            this.lblNodo.Location = new System.Drawing.Point(217, 22);
             this.lblNodo.Name = "lblNodo";
             this.lblNodo.Size = new System.Drawing.Size(269, 33);
             this.lblNodo.TabIndex = 2;
+            this.lblNodo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rbEncrypt
             // 
@@ -109,9 +111,9 @@ namespace Encriptador
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(259, 172);
+            this.btnReset.Location = new System.Drawing.Point(243, 172);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(112, 30);
+            this.btnReset.Size = new System.Drawing.Size(112, 40);
             this.btnReset.TabIndex = 1;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;

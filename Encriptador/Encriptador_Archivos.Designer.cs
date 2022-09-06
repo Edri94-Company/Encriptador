@@ -32,6 +32,8 @@ namespace Encriptador
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Encriptador_Archivos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbEtiquetas = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.buttonPers11 = new Encriptador.Botones.ButtonPers1();
             this.label8 = new System.Windows.Forms.Label();
             this.lblKeys = new System.Windows.Forms.Label();
@@ -54,6 +56,8 @@ namespace Encriptador
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbEtiquetas);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.buttonPers11);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.lblKeys);
@@ -73,6 +77,25 @@ namespace Encriptador
             this.groupBox1.Size = new System.Drawing.Size(717, 630);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmbEtiquetas
+            // 
+            this.cmbEtiquetas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEtiquetas.FormattingEnabled = true;
+            this.cmbEtiquetas.Location = new System.Drawing.Point(163, 522);
+            this.cmbEtiquetas.Name = "cmbEtiquetas";
+            this.cmbEtiquetas.Size = new System.Drawing.Size(100, 33);
+            this.cmbEtiquetas.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 525);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 25);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Etiqueta Archivo:";
             // 
             // buttonPers11
             // 
@@ -84,9 +107,9 @@ namespace Encriptador
             this.buttonPers11.FlatAppearance.BorderSize = 0;
             this.buttonPers11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPers11.ForeColor = System.Drawing.Color.White;
-            this.buttonPers11.Location = new System.Drawing.Point(20, 507);
+            this.buttonPers11.Location = new System.Drawing.Point(346, 507);
             this.buttonPers11.Name = "buttonPers11";
-            this.buttonPers11.Size = new System.Drawing.Size(672, 60);
+            this.buttonPers11.Size = new System.Drawing.Size(346, 60);
             this.buttonPers11.TabIndex = 14;
             this.buttonPers11.Text = "Encriptar Archivo";
             this.buttonPers11.TextColor = System.Drawing.Color.White;
@@ -260,5 +283,7 @@ namespace Encriptador
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolTip toolTip1;
         private Botones.ButtonPers1 buttonPers11;
+        private System.Windows.Forms.ComboBox cmbEtiquetas;
+        private System.Windows.Forms.Label label7;
     }
 }
